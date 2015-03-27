@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A6341D891AC4FF130006046F"
-               BuildableName = "swift-sample.app"
-               BlueprintName = "swift-sample"
-               ReferencedContainer = "container:swift-sample.xcodeproj">
+               BlueprintIdentifier = "A6341DBC1AC5014A0006046F"
+               BuildableName = "swift-single-app.app"
+               BlueprintName = "swift-single-app"
+               ReferencedContainer = "container:swift-single-app.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A6341DA31AC4FF130006046F"
-               BuildableName = "swift-sampleTests.xctest"
-               BlueprintName = "swift-sampleTests"
-               ReferencedContainer = "container:swift-sample.xcodeproj">
+               BlueprintIdentifier = "A6341DD41AC5014A0006046F"
+               BuildableName = "swift-single-appTests.xctest"
+               BlueprintName = "swift-single-appTests"
+               ReferencedContainer = "container:swift-single-app.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A6341DA31AC4FF130006046F"
-               BuildableName = "swift-sampleTests.xctest"
-               BlueprintName = "swift-sampleTests"
-               ReferencedContainer = "container:swift-sample.xcodeproj">
+               BlueprintIdentifier = "A6341DD41AC5014A0006046F"
+               BuildableName = "swift-single-appTests.xctest"
+               BlueprintName = "swift-single-appTests"
+               ReferencedContainer = "container:swift-single-app.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A6341D891AC4FF130006046F"
-            BuildableName = "swift-sample.app"
-            BlueprintName = "swift-sample"
-            ReferencedContainer = "container:swift-sample.xcodeproj">
+            BlueprintIdentifier = "A6341DBC1AC5014A0006046F"
+            BuildableName = "swift-single-app.app"
+            BlueprintName = "swift-single-app"
+            ReferencedContainer = "container:swift-single-app.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -75,10 +75,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A6341D891AC4FF130006046F"
-            BuildableName = "swift-sample.app"
-            BlueprintName = "swift-sample"
-            ReferencedContainer = "container:swift-sample.xcodeproj">
+            BlueprintIdentifier = "A6341DBC1AC5014A0006046F"
+            BuildableName = "swift-single-app.app"
+            BlueprintName = "swift-single-app"
+            ReferencedContainer = "container:swift-single-app.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -93,10 +93,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A6341D891AC4FF130006046F"
-            BuildableName = "swift-sample.app"
-            BlueprintName = "swift-sample"
-            ReferencedContainer = "container:swift-sample.xcodeproj">
+            BlueprintIdentifier = "A6341DBC1AC5014A0006046F"
+            BuildableName = "swift-single-app.app"
+            BlueprintName = "swift-single-app"
+            ReferencedContainer = "container:swift-single-app.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

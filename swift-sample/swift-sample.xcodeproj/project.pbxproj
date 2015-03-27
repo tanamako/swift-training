@@ -415,6 +415,7 @@
 				A6341DB01AC4FF130006046F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6341DB11AC4FF130006046F /* Build configuration list for PBXNativeTarget "swift-sampleTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +424,7 @@
 				A6341DB31AC4FF130006046F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
