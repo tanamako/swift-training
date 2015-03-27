@@ -1,2 +1,2 @@
 # swift-sample
-nickさんすみませんmockteckのpcから
+nickさんすみませんmockteckのpcからcommitしてます
