@@ -1,1 +1,2 @@
 # swift-sample
+nickさんすみませんmocktechlabのpcからcommitしてます
