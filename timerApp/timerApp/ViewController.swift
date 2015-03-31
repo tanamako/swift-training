@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // 初期表示
+        // 時計初期表示
         var timer = NSTimer.scheduledTimerWithTimeInterval(1/60, target: self, selector: "upDateTime", userInfo: nil, repeats: true)
     }
 
@@ -44,11 +44,14 @@ class ViewController: UIViewController {
     var timeRunFlg = false
     var stopTimer : NSTimer!
     
+    
     // 0秒の時間定義
     func stopWatchTime(countNum:Int){
         let ms = countNum % 100
         let s = (countNum - ms) / 100 % 60
         let m = (countNum - s - ms) / 6000 % 3600
+
+        // 00:00:00 2桁に
         stopWatch.text = String(format: "%02d:%02d.%02d", m,s,ms)
     }
     
