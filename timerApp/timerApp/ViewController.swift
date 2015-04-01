@@ -15,22 +15,19 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        // 時計初期表示
+        // 時計の初期表示
         var timer = NSTimer.scheduledTimerWithTimeInterval(1/60, target: self, selector: "upDateTime", userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    // 現在時刻
+    // 現在時刻生成
     func nowDate(){
         var now = NSDate()
         let df = NSDateFormatter()
-        df.dateFormat = "yyyy/MM/dd HH:mm:ss"
+        df.dateFormat = "yyyy/MM/dd HH:mm:ss" //日付フォーマットの設定
         var dateStr = df.stringFromDate(now)
         myLabel.text = dateStr
     }
@@ -47,9 +44,9 @@ class ViewController: UIViewController {
     
     // 0秒の時間定義
     func stopWatchTime(countNum:Int){
-        let ms = countNum % 100
-        let s = (countNum - ms) / 100 % 60
-        let m = (countNum - s - ms) / 6000 % 3600
+        let ms = countNum % 100 //ミリ秒計算
+        let s = (countNum - ms) / 100 % 60 // 秒
+        let m = (countNum - s - ms) / 6000 % 3600 //分
 
         // 00:00:00 2桁に
         stopWatch.text = String(format: "%02d:%02d.%02d", m,s,ms)
@@ -60,7 +57,7 @@ class ViewController: UIViewController {
         nowDate()
     }
     
-    func update(){
+    func upStopWatchTime(){
         countNum++
         stopWatchTime(countNum)
     }
@@ -69,7 +66,7 @@ class ViewController: UIViewController {
     @IBAction func startBtn(sender: UIButton) {
         if timeRunFlg == false{
             stopTimer = NSTimer.scheduledTimerWithTimeInterval(
-            1/60, target: self, selector: "update", userInfo: nil, repeats: true)
+            1/60, target: self, selector: "upStopWatchTime", userInfo: nil, repeats: true)
             timeRunFlg = true
         }
     }
