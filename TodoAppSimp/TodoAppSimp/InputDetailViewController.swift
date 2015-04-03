@@ -103,6 +103,7 @@ class InputDetailViewController: UIViewController, UITextFieldDelegate{
         self.navigationController?.popViewControllerAnimated(true)
     }
 
+    // バリデーション
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {
         println("textFieldShouldEndEditing:" + textField.text)
         
