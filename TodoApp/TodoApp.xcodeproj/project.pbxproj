@@ -16,6 +16,8 @@
 		A6D21C451ACA9D40003A582A /* TodoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D21C441ACA9D40003A582A /* TodoAppTests.swift */; };
 		A6D21C801ACBAB33003A582A /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D21C7F1ACBAB33003A582A /* secondViewController.swift */; };
 		A6D21C841ACBBEA9003A582A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D21C831ACBBEA9003A582A /* TableViewController.swift */; };
+		FD4F1B061ACCD3D200198B32 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F1B051ACCD3D200198B32 /* DetailViewController.swift */; };
+		FD4F1B081ACD05A500198B32 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F1B071ACD05A500198B32 /* TodoStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		A6D21C441ACA9D40003A582A /* TodoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppTests.swift; sourceTree = "<group>"; };
 		A6D21C7F1ACBAB33003A582A /* secondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
 		A6D21C831ACBBEA9003A582A /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		FD4F1B051ACCD3D200198B32 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FD4F1B071ACD05A500198B32 /* TodoStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 				A6D21C301ACA9D40003A582A /* ViewController.swift */,
 				A6D21C831ACBBEA9003A582A /* TableViewController.swift */,
 				A6D21C321ACA9D40003A582A /* Main.storyboard */,
+				FD4F1B071ACD05A500198B32 /* TodoStore.swift */,
+				FD4F1B051ACCD3D200198B32 /* DetailViewController.swift */,
 				A6D21C351ACA9D40003A582A /* Images.xcassets */,
 				A6D21C371ACA9D40003A582A /* LaunchScreen.xib */,
 				A6D21C2D1ACA9D40003A582A /* TodoApp.xcdatamodeld */,
@@ -224,7 +230,9 @@
 				A6D21C801ACBAB33003A582A /* secondViewController.swift in Sources */,
 				A6D21C841ACBBEA9003A582A /* TableViewController.swift in Sources */,
 				A6D21C311ACA9D40003A582A /* ViewController.swift in Sources */,
+				FD4F1B061ACCD3D200198B32 /* DetailViewController.swift in Sources */,
 				A6D21C2C1ACA9D40003A582A /* AppDelegate.swift in Sources */,
+				FD4F1B081ACD05A500198B32 /* TodoStore.swift in Sources */,
 				A6D21C2F1ACA9D40003A582A /* TodoApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

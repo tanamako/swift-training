@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import CoreData
 
 class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     var param:String = "init"
     var paramText:String = "init"
 
+    // テーブルに表示するアイテムの配列を用意
+    var memos: [NSString] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,23 +29,45 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     // 行数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-      return 10
+      return memos.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         var cell = UITableViewCell(style: .Default, reuseIdentifier: "myCell")
-        cell.textLabel?.text = "\(self.param) | \(self.paramText)"
+        var nowNumber = indexPath.row + 1
+        
+        cell.textLabel?.text = "\(self.param) | \(self.paramText) | NO. \(nowNumber)"
+        
         return cell
     }
     // 選択された時に行う処理
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         println("\(indexPath.row)行目を選択")
+        
+        // detailに遷移する際のsegueの呼び出し
+        performSegueWithIdentifier("goDetailViewController", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "goDetailViewController"{
+            var subVC : DetailViewController = segue.destinationViewController as DetailViewController
+            subVC.param = self.param
+            subVC.paramText = self.paramText
+        }
     }
     
     // ステータスバーを非表示に
     override func prefersStatusBarHidden() -> Bool{
         return true
     }
+
+    /*
+    * DetailViewから戻ってきた時の処理
+    */
+    @IBAction func backFromDetailView(segue:UIStoryboardSegue){
+        println("ViewController#backFromSecondView")
+    }
+    
     
 }
 
