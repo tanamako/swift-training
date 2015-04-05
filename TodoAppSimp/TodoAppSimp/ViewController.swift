@@ -25,10 +25,15 @@ class ViewController: UIViewController, UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        let title = defaults.objectForKey("title") as? [String]
-        var str:[String]! = title
-        return str.count
+        var cellCount:Int = 0
+        if let title = defaults.objectForKey("title") as? [String]{
+            var str:[String] = title
+            cellCount = str.count
+            return cellCount
+        }
+        return cellCount
     }
+    
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "myCell")
 
