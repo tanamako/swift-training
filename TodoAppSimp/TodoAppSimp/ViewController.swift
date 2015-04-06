@@ -27,6 +27,7 @@ class ViewController: UIViewController, UITableViewDelegate{
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
@@ -55,29 +56,26 @@ class ViewController: UIViewController, UITableViewDelegate{
     func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         // 削除のとき.
         if editingStyle == UITableViewCellEditingStyle.Delete {
-            println("削除")
 
             if let title = defaults.objectForKey("title") as? [String]{
                 // 指定されたセルのオブジェクトをmyItemsから削除する.
-                
                 var arr:[String] = title
                 arr.removeAtIndex(indexPath.row)
                 println(arr)
-
                 // 配列に値追加
                 defaults.setObject(arr,forKey: "title")
-
-                // 同期
-                defaults.synchronize()
             }
-
-            // 時間を配列に追加
+            
             if let timeStamp = defaults.objectForKey("timeStamp") as? [String]{
-                var timeStamp:[String] = timeStamp
-                timeStamp.removeAtIndex(indexPath.row)
-                
-                defaults.setObject(timeStamp, forKey: "timeStamp")
+                println(timeStamp)
+                var timeArr:[String] = timeStamp
+                timeArr.removeAtIndex(indexPath.row)
+                defaults.setObject(timeArr,forKey: "timeStamp")
             }
+
+            // 同期
+            defaults.synchronize()
+
             
             // TableViewを再読み込み.
             tableView.reloadData()
@@ -92,9 +90,8 @@ class ViewController: UIViewController, UITableViewDelegate{
         let title = defaults.objectForKey("title") as? [String]
         var arr:[String]! = title
         var str = arr[indexPath.row]
-        
+
         cell.textLabel?.text = str
-            println(str)
 
         if let timeStamp = defaults.objectForKey("timeStamp") as? [String]{
             println(timeStamp)

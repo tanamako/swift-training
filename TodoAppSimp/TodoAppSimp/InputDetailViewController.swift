@@ -69,6 +69,16 @@ class InputDetailViewController: UIViewController, UITextFieldDelegate{
             
             println(defaults.objectForKey("title"))
             
+        } else {
+            // keyがなければ配列を生成
+            println("1回目")
+            var titles:[NSString] = []
+            var timeStamps:[NSString] = []
+
+            // 配列に値追加
+            titles.append(self.textField.text)
+            
+            defaults.synchronize()
         }
 
         // 時間を配列に追加
@@ -93,7 +103,6 @@ class InputDetailViewController: UIViewController, UITextFieldDelegate{
         self.navigationController?.popViewControllerAnimated(true)
     }
 
-    // バリデーション
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {
         println("textFieldShouldEndEditing:" + textField.text)
         
@@ -116,10 +125,10 @@ class InputDetailViewController: UIViewController, UITextFieldDelegate{
     // 値削除
     @IBAction func keyDelete(sender: AnyObject) {
         if (defaults.objectForKey("title") != nil){
-            var title:[NSString] = []
+            let title:[NSString] = []
                 defaults.setObject(title,forKey: "title")
             
-            var timeStamp:[NSString] = []
+            let timeStamp:[NSString] = []
             defaults.setObject(timeStamp,forKey: "timeStamp")
 
         }
