@@ -39,12 +39,6 @@ class ViewController: UIViewController, UITableViewDelegate{
         return cellCount
     }
 
-    // セル選択時処理
-    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath:NSIndexPath!) {
-        println("\(indexPath.row)行")
-        println("Edeintg: \(tableView.editing)")
-    }
-
     override func setEditing(editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         
