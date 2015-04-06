@@ -22,8 +22,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var table: UITableView!
     
     // テーブルに表示するアイテムの配列を用意
-    var todosMemo: [NSString] = []
-    var todosDate: [NSString] = []
+    var todosMemo: [String] = []
+    var todosDate: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.navigationItem.rightBarButtonItem = addBtn
 
         // deleteBtn
-        deleteBtn = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: "onDelete")
+        deleteBtn = UIBarButtonItem(title: "全削除", style: .Plain, target: self, action: "onDelete")
         self.navigationItem.leftBarButtonItem = deleteBtn
         
 
@@ -90,19 +90,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         todosMemo = []
         todosDate = []
 
-        let dateFormatter = NSDateFormatter()                                   // フォーマットの取得
-        dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")  // JPロケール
-        dateFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"         // フォーマットの指定
         
         for data in results {
-            todosDate.append(dateFormatter.stringFromDate(data.date))
+            todosDate.append(dataFormat(data.date))
             todosMemo.append(data.name)
         }
         
         // テーブル情報を更新する
         self.table.reloadData()
     }
-    
+
+    // 日付のフォーマット String型で返却
+    func dataFormat (date:NSDate) -> String{
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")
+        dateFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+        var dateStr = dateFormatter.stringFromDate(date)
+        return dateStr
+    }
     
     // addBtnをタップしたときのアクション
     func onClick() {
@@ -156,8 +161,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             appDelegate.saveContext()
             println(fetchRequest)
             
-            // table 更新
-            table.reloadData()
         }
         
     }
