@@ -69,16 +69,6 @@ class InputDetailViewController: UIViewController, UITextFieldDelegate{
             
             println(defaults.objectForKey("title"))
             
-        } else {
-            // keyがなければ配列を生成
-            println("1回目")
-            var titles:[NSString] = []
-            var timeStamps:[NSString] = []
-
-            // 配列に値追加
-            titles.append(self.textField.text)
-            
-            defaults.synchronize()
         }
 
         // 時間を配列に追加
