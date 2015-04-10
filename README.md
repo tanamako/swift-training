@@ -45,3 +45,9 @@ CoreData: warning: Unable to load class named 'SampleEntity' for entity 'SampleE
 
 https://developer.apple.com/library/mac/documentation/Swift/Conceptual/BuildingCocoaApps/WritingSwiftClassesWithObjective-CBehavior.html  
 
+# Gunosy的なRSSリーダーアプリ
+・URLを読み込み非同期通信  
+・TableViewで表示
+・タブを使用  
+・SwiftyJson等のライブラリを使用  
+https://github.com/SwiftyJSON/SwiftyJSON
