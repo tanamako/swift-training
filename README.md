@@ -1,6 +1,8 @@
 
 # 初学者がSwiftを体系的に学ぶトレーニング用独自教材
 
+!(https://github.com/tanamako/swift-sample/blob/master/images/swift.png)
+
 - 時計アプリ&ストップウォッチ  
 - TODOアプリ  
 - Gunosy的なRSSリーダーアプリ  
