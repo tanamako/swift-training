@@ -38,17 +38,20 @@ defaults.synchronize()
 
 ```
 ※ CoreDataを使う際、Xcodeのxxxx.xcdatamodeldでEntity name, classを記述し、Swiftファイルが自動生成されるが、
-生成後にclass nameに{Project Name}.Entity等に変更しないと下記のようなエラーが起きる。
+生成後にclass nameに{Project Name}.Entity等に変更しないと下記のようなエラーが起きる。  
+※ CoreDataの使用例は8冊程度Swiftの書籍を読んだが、特に記述がないので注意。
+
+#### error
 
 ```
 CoreData: warning: Unable to load class named 'SampleEntity' for entity 'SampleEntity'. Class not found, using default NSManagedObject instead.
 ```
-
+#### 参考URL
 https://developer.apple.com/library/mac/documentation/Swift/Conceptual/BuildingCocoaApps/WritingSwiftClassesWithObjective-CBehavior.html  
 
-
-#### 参考URL
 https://github.com/tanamako/swift-sample/tree/master/SwiftCData  
+
+
 
 # Gunosy的なRSSリーダーアプリ
 ・URLを読み込み非同期通信  
