@@ -63,7 +63,7 @@ https://github.com/tanamako/swift-sample/tree/master/SwiftCData
 https://github.com/SwiftyJSON/SwiftyJSON
 
 
-### Installation
+# Installation
 各種ライブラリをインストールする際に利用
 
 Using [CocoaPods](http://cocoapods.org).
@@ -72,5 +72,5 @@ Using [CocoaPods](http://cocoapods.org).
 pod install
 ```
 
-### Created by  
+# Created by  
 Makoto tanaka  
