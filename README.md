@@ -6,4 +6,14 @@
 
 ## TODOアプリ
 ・NUUserDefaultsを使って軽めのデータを扱う。  
+```swift
+let defaults = NSUserDefaults.standardUserDefaults()
+
+// value , key
+defaults.setObject(arr, forKey: "title")
+
+//同期する処理
+defaults.synchronize()
+
+```
 ・CoreDataを使い、データベースの操作を行う
