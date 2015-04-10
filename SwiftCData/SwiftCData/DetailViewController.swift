@@ -28,7 +28,6 @@ class DetailViewController: UIViewController {
     
     //登録ボタン押す
     @IBAction func regist(sender: AnyObject) {
-        
         if todo != nil {
             self.editTodo()
         } else {
@@ -36,8 +35,8 @@ class DetailViewController: UIViewController {
         }
         
         self.dismissViewController()
-        
     }
+
     
     //データ登録
     func createTodo() {

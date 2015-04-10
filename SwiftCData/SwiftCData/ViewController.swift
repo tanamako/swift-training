@@ -19,8 +19,6 @@ class ViewController: UITableViewController, NSFetchedResultsControllerDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        println(123)
-
         fetchedResultController = self.getFetchedResultController()
         fetchedResultController.delegate = self
         fetchedResultController.performFetch(nil)
@@ -82,8 +80,8 @@ class ViewController: UITableViewController, NSFetchedResultsControllerDelegate 
     }
     
     func todoFetchRequest() -> NSFetchRequest {
-        let fetchRequest = NSFetchRequest(entityName: "Todos")
-        let sortDescriptor = NSSortDescriptor(key: "create_at", ascending: false)
+        let fetchRequest = NSFetchRequest(entityName: "Model")
+        let sortDescriptor = NSSortDescriptor(key: "timeStamp", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
         return fetchRequest
     }
