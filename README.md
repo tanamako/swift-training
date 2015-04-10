@@ -36,6 +36,12 @@ defaults.synchronize()
     var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController()
 
 ```
+※ CoreDataを使う際、Xcodeのxxxx.xcdatamodeldでEntity name, classを記述し、Swiftファイルが自動生成されるが、
+生成後にclass nameに{Project Name}.Entity等に変更しないと下記のようなエラーが起きる。
 
+```
+CoreData: warning: Unable to load class named 'SampleEntity' for entity 'SampleEntity'. Class not found, using default NSManagedObject instead.
+```
 
+https://developer.apple.com/library/mac/documentation/Swift/Conceptual/BuildingCocoaApps/WritingSwiftClassesWithObjective-CBehavior.html  
 
