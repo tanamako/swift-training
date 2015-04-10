@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+//import SwiftyJson
 
 class ViewController: UIViewController {
 
@@ -16,49 +17,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
 
         println("初期ロード")
-        
-        class MyParserDelegate : NSObject, NSXMLParserDelegate{
-            
-            var isTitle = false
-            
-            func parser(parser: NSXMLParser!, didStartElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!, attributes attributeDict: [NSObject: AnyObject]!) {
-                // 開始タグを表示
-                println("開始タグ\(elementName)")
-                
-                // フラグを設定
-                isTitle = true
-            }
-            
-            func parser(parser: NSXMLParser!, didEndElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!) {
-                // タイトルタグの場合
-                if (elementName == "title"){
-                    println()
-                    // フラグを設定
-                    isTitle = false
-                }
-            }
-            
-            func parser(parser: NSXMLParser!, foundCharacters string: String!) {
-                // タイトルのパース中の場合
-                if(isTitle){
-                    print(String)
-                }
-            }
-        }
-        
-        var urlString = "http://rss.dailynews.yahoo.co.jp/fc/rss.xml"
-        var url = NSURL(string: urlString)
-        
-        // xml parser
-        var parser = NSXMLParser(contentsOfURL: url)
-        
-        // delegate
-        var delegate = MyParserDelegate()
-        parser?.delegate = delegate
-        // parse
-        parser?.parse()
-        
 
+
+        let url = NSURL(string: "http://maps.googleapis.com/maps/api/directions/json?origin=Boston,MA&destination=Concord,MA&sensor=false")
+        var request = NSURLRequest(URL: url!)
+        var data = NSURLConnection.sendSynchronousRequest(request, returningResponse: nil, error: nil)
+        if data != nil {
+            var hoge = JSON(data: data!)
+            println(hoge)
+        }
         
     }
 

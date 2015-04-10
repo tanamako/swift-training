@@ -44,13 +44,7 @@ class ViewController: UIViewController, UITableViewDelegate{
         super.setEditing(editing, animated: animated)
         
         tableView.setEditing(editing, animated: true)
-        
-        if editing {
-            println("編集モード")
-        } else {
-            println("編集可能")
-        }
-    }
+            }
     
     // 削除ボタン押下時に呼ばれる
     func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {

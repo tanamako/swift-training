@@ -1,0 +1,8 @@
+c
+.DS_Store
+
+#CocoaPod
+Pods/*
+
+#playground
+*.playground
