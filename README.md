@@ -6,6 +6,7 @@
 これらを制作するカリュキュラム
 
 ## TODOアプリ
+### NSUserDefaultsの場合
 
 ・NSUserDefaultsを使って軽めのデータを扱う。
 
@@ -21,6 +22,9 @@ defaults.setObject(arr, forKey: "title")
 defaults.synchronize()
 
 ```
+
+### CoreDataの場合
+
 ・CoreDataを使い、データベースの操作を行う  
 ・TableViewControllerを使い、リスト管理  
 ・`NSManagedObjectContext` でデータ取得  
