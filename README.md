@@ -21,10 +21,10 @@ defaults.setObject(arr, forKey: "title")
 defaults.synchronize()
 
 ```
-・CoreDataを使い、データベースの操作を行う
-・TableViewControllerを使い、リスト管理
-・`NSManagedObjectContext` でデータ取得
-・`fetchedResultController` でラップ
+・CoreDataを使い、データベースの操作を行う  
+・TableViewControllerを使い、リスト管理  
+・`NSManagedObjectContext` でデータ取得  
+・`fetchedResultController` でラップ  
 
 ```swift
 
