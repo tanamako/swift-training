@@ -71,3 +71,6 @@ Using [CocoaPods](http://cocoapods.org).
 ```sh
 pod install
 ```
+
+### Created by  
+Makoto tanaka  
