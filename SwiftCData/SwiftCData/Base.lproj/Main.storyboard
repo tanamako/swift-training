@@ -52,6 +52,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Todo List" id="dA6-Ux-tqo">
+                        <barButtonItem key="leftBarButtonItem" title="all delete" id="Y1f-df-dVa">
+                            <connections>
+                                <action selector="allDeleteBtn:" destination="AQY-S5-Cgn" id="26D-TP-BY1"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="HZf-nH-D0C" userLabel="Bar Button Item">
                             <connections>
                                 <segue destination="WJl-Sq-bfV" kind="show" id="kcU-5f-iHr"/>

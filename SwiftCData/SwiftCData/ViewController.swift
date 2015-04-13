@@ -23,7 +23,16 @@ class ViewController: UITableViewController, NSFetchedResultsControllerDelegate 
         fetchedResultController.delegate = self
         fetchedResultController.performFetch(nil)
         
-        //cellの高さ調整
+        tableCellResize()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        tableCellResize()
+    }
+
+    //cellの高さ調整
+    func tableCellResize(){
         tableView.estimatedRowHeight = 85
         tableView.rowHeight = UITableViewAutomaticDimension
     }
@@ -42,7 +51,6 @@ class ViewController: UITableViewController, NSFetchedResultsControllerDelegate 
         return numberOfRowsInsection!
     }
     
-    //cellにデータ入れる
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath) as UITableViewCell
@@ -65,6 +73,7 @@ class ViewController: UITableViewController, NSFetchedResultsControllerDelegate 
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
         let managedObject: NSManagedObject = fetchedResultController.objectAtIndexPath(indexPath) as NSManagedObject
+        
         managedObjectContext?.deleteObject(managedObject)
         managedObjectContext?.save(nil)
     }
@@ -73,12 +82,30 @@ class ViewController: UITableViewController, NSFetchedResultsControllerDelegate 
         tableView.reloadData()
     }
     
+    // 全件削除ボタン
+    @IBAction func allDeleteBtn(sender: UIBarButtonItem) {
+        var lists = fetchedResultController.fetchedObjects as [Model]
+        
+        for ( var i = 0; i < lists.count ; i++ ) {
+            let indexPath = NSIndexPath(forRow: i, inSection: 0)
+            println("indexPath: \(indexPath)")
+            
+            let managedObject: NSManagedObject = fetchedResultController.objectAtIndexPath(indexPath) as NSManagedObject
+            managedObjectContext?.deleteObject(managedObject)
+        }
+
+        lists.removeAll(keepCapacity: false)
+
+        managedObjectContext?.save(nil)
+        tableView.reloadData()
+    }
     
     func getFetchedResultController() -> NSFetchedResultsController {
         fetchedResultController = NSFetchedResultsController(fetchRequest: self.todoFetchRequest(), managedObjectContext: managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
         return fetchedResultController
     }
     
+    // 検索
     func todoFetchRequest() -> NSFetchRequest {
         let fetchRequest = NSFetchRequest(entityName: "Model")
         let sortDescriptor = NSSortDescriptor(key: "timeStamp", ascending: false)
