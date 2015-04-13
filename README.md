@@ -105,6 +105,8 @@ https://github.com/SwiftyJSON/SwiftyJSON
 Using [CocoaPods](http://cocoapods.org).
 
 ```sh
+$ sudo gem install cocoapods
+
 pod install
 ```
 
