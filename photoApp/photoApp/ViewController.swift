@@ -25,8 +25,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var imageUIView = UIImageView()
     let screenW = UIScreen.mainScreen().bounds.size.width;
     let screenH = UIScreen.mainScreen().bounds.size.height;
-
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,28 +42,31 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
         
-        // バックカメラからVideoInputを取得.
-        let videoInput = AVCaptureDeviceInput.deviceInputWithDevice(myDevice, error: nil) as AVCaptureDeviceInput
-        
-        // セッションに追加.
-        mySession.addInput(videoInput)
-        
-        // 出力先を生成.
-        myImageOutput = AVCaptureStillImageOutput()
-        
-        // セッションに追加.
-        mySession.addOutput(myImageOutput)
-        
-        // 画像を表示するレイヤーを生成.
-        let myVideoLayer : AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer.layerWithSession(mySession) as AVCaptureVideoPreviewLayer
-        myVideoLayer.frame = self.view.bounds
-        myVideoLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-        
-        // Viewに追加.
-        self.view.layer.addSublayer(myVideoLayer)
-        
-        // セッション開始.
-        mySession.startRunning()
+        // 使用可能か
+        if(devices.count > 0){
+            // バックカメラからVideoInputを取得.
+            let videoInput = AVCaptureDeviceInput.deviceInputWithDevice(myDevice, error: nil) as AVCaptureDeviceInput
+            
+            // セッションに追加.
+            mySession.addInput(videoInput)
+            
+            // 出力先を生成.
+            myImageOutput = AVCaptureStillImageOutput()
+            
+            // セッションに追加.
+            mySession.addOutput(myImageOutput)
+            
+            // 画像を表示するレイヤーを生成.
+            let myVideoLayer : AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer.layerWithSession(mySession) as AVCaptureVideoPreviewLayer
+            myVideoLayer.frame = self.view.bounds
+            myVideoLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+            
+            // Viewに追加.
+            self.view.layer.addSublayer(myVideoLayer)
+            
+            // セッション開始.
+            mySession.startRunning()
+        }
         
         
        /*
