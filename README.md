@@ -33,6 +33,17 @@ https://github.com/tanamako/swift-training/tree/master/SwiftCamera
 https://developer.apple.com/library/ios/documentation/AudioVideo/Conceptual/CameraAndPhotoLib_TopicsForIOS/Introduction/Introduction.html
 
 
+## カメラアプリ(AVFoundationを使用)
+import AVFoundation  
+AVFoundation: 画像を取得する画面をカスタマイズ可能  
+AVCaptureSession,AVCaptureDevice,AVCaptureStillImageOutputを利用  
+
+https://github.com/tanamako/swift-training/tree/master/photoApp
+
+
+
+
+
 ## TODOアプリ
 ### NSUserDefaultsの場合
 
