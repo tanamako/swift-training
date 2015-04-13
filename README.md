@@ -18,7 +18,10 @@ let camera = UIImagePickerControllerSourceType.Camera
 
 ```
 
-https://github.com/tanamako/swift-training/tree/master/SwiftCamera
+https://github.com/tanamako/swift-training/tree/master/SwiftCamera  
+
+◆ iOS Developer Library  
+https://developer.apple.com/library/ios/documentation/AudioVideo/Conceptual/CameraAndPhotoLib_TopicsForIOS/Introduction/Introduction.html
 
 
 ## TODOアプリ
