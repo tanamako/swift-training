@@ -10,7 +10,8 @@
 これらを制作するカリュキュラム
 
 ## カメラアプリ
-UIImagePickerController, UIImagePickerControllerDelegate, UINavigationControllerDelegateを使用  
+UIImagePickerController, UIImagePickerControllerDelegate, UINavigationControllerDelegateを使用
+AVFoundationは使用しない基本的なカメラアプリの場合  
 
 ```swift
 // UIImagePickerControllerSourceTypeの中は列挙体で記述されているので省略できる
