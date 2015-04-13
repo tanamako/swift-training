@@ -4,9 +4,22 @@
 ![alt text](https://github.com/tanamako/swift-sample/blob/master/images/swift.png)
 
 - 時計アプリ&ストップウォッチ  
+- カメラアプリ  
 - TODOアプリ  
 - Gunosy的なRSSリーダーアプリ  
 これらを制作するカリュキュラム
+
+## カメラアプリ
+UIImagePickerController, UIImagePickerControllerDelegate, UINavigationControllerDelegateを使用  
+
+```swift
+// UIImagePickerControllerSourceTypeの中は列挙体で記述されているので省略できる
+let camera = UIImagePickerControllerSourceType.Camera
+
+```
+
+https://github.com/tanamako/swift-training/tree/master/SwiftCamera
+
 
 ## TODOアプリ
 ### NSUserDefaultsの場合
