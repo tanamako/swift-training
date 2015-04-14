@@ -90,6 +90,15 @@ https://developer.apple.com/library/mac/documentation/Swift/Conceptual/BuildingC
 https://github.com/tanamako/swift-sample/tree/master/SwiftCData  
 
 
+# 通信系アプリ
+ - 非同期通信
+ - ローディング表示
+ - 上記に付随するライブラリの使用  
+
+ ##ライブラリ
+ - SVProgressHUD https://github.com/TransitApp/SVProgressHUD  
+ - SwiftyJson
+
 
 # Gunosy的なRSSリーダーアプリ
 ・URLを読み込み非同期通信  
