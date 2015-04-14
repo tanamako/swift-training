@@ -13,38 +13,25 @@ class DetailController : UIViewController{
 
     @IBOutlet weak var webView: UIWebView!
     var parentNavigationController : UINavigationController?
-    var articles = [Article]()
+    var articles:AnyObject = [Article]()
+    var linkUrl = NSURL(string: "http://coolhomme.jp")
     
     override func viewDidLoad() {
             super.viewDidLoad()
-        
-        var url = "http://coolhomme.jp/api/"
-        var request = NSURLRequest(URL: NSURL(string: url)!)
-        var data = NSURLConnection.sendSynchronousRequest(request, returningResponse: nil, error: nil)
-        
-        if data != nil{
-            var json = JSON(data: data!)
-            
-            let count: Int? = json["result"].array?.count
-            if let count = count {
-                for index in 0 ... count - 1 {
-                    let article = Article(json: json["result"][index])
-                    articles.append(article)
-                }
-            }
-        }
 
+        println("articles: \(articles)")
         
-        // 記事ごとにする indexPath.row
-        var articleUrl =  self.articles[0].linkUrl
-        let req = NSURLRequest(URL: articleUrl!)
+        var title: String! = self.articles.title
+        println(title)
         
+        linkUrl = self.articles.linkUrl
+        println("linkUrl ************** \(linkUrl)")
         
-        // ローディング入れる
-        
+        var request = NSURLRequest(URL: linkUrl!)
         
         // webviewを表示
-        webView.loadRequest(req)
+        webView.loadRequest(request)
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
