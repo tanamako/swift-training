@@ -21,8 +21,8 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if todo != nil {
-            self.todoValue.text = todo?.title
+        if let todo = todo {
+            self.todoValue.text = todo.title
         }
     }
     
