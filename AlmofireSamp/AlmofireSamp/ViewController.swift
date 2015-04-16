@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController ,UITableViewDataSource, UITableViewDelegate{
+class ViewController: UIViewController {
     
     var articles = [Article]()
     
