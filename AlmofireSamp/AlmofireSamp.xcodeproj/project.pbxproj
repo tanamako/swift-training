@@ -17,6 +17,7 @@
 		FD9E84741ADE812400FB7E2D /* AlmofireSampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E84731ADE812400FB7E2D /* AlmofireSampTests.swift */; };
 		FDBA61D91ADF51B100B24031 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBA61D81ADF51B100B24031 /* APIClient.swift */; };
 		FDBA61DB1ADF525400B24031 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBA61DA1ADF525400B24031 /* Article.swift */; };
+		FDBA61DD1ADF769C00B24031 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBA61DC1ADF769C00B24031 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		FD9E84731ADE812400FB7E2D /* AlmofireSampTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlmofireSampTests.swift; sourceTree = "<group>"; };
 		FDBA61D81ADF51B100B24031 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = Models/APIClient.swift; sourceTree = "<group>"; };
 		FDBA61DA1ADF525400B24031 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Article.swift; path = Models/Article.swift; sourceTree = "<group>"; };
+		FDBA61DC1ADF769C00B24031 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				FDBA61D81ADF51B100B24031 /* APIClient.swift */,
 				FDBA61DA1ADF525400B24031 /* Article.swift */,
 				FD9E84611ADE812400FB7E2D /* Main.storyboard */,
+				FDBA61DC1ADF769C00B24031 /* DetailViewController.swift */,
 				FD9E84641ADE812400FB7E2D /* Images.xcassets */,
 				FD9E84661ADE812400FB7E2D /* LaunchScreen.xib */,
 				FD9E845C1ADE812400FB7E2D /* AlmofireSamp.xcdatamodeld */,
@@ -299,6 +302,7 @@
 				FD9E84601ADE812400FB7E2D /* ViewController.swift in Sources */,
 				FD9E845B1ADE812400FB7E2D /* AppDelegate.swift in Sources */,
 				FD9E845E1ADE812400FB7E2D /* AlmofireSamp.xcdatamodeld in Sources */,
+				FDBA61DD1ADF769C00B24031 /* DetailViewController.swift in Sources */,
 				FDBA61D91ADF51B100B24031 /* APIClient.swift in Sources */,
 				FDBA61DB1ADF525400B24031 /* Article.swift in Sources */,
 			);

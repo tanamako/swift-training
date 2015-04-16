@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class Article: NSObject{
     
@@ -14,9 +15,9 @@ class Article: NSObject{
     var imagelUrl: NSURL?
     var linkUrl :NSURL?
     
-//    init(json: JSON){
-//        title = json["post_title"].stringValue
-//        imagelUrl = NSURL(string: json["thumbnail_url"].stringValue)
-//        linkUrl = NSURL(string: json["guid"].stringValue)
-//    }
+    init(json: JSON){
+        title = json["post_title"].stringValue
+        imagelUrl = NSURL(string: json["thumbnail_url"].stringValue)
+        linkUrl = NSURL(string: json["guid"].stringValue)
+    }
 }
