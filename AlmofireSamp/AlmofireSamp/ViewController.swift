@@ -81,7 +81,7 @@ class ViewController: UIViewController {
     
 }
 
-
+// MARK: - UITableViewDelegate
 extension ViewController : UITableViewDelegate {
     // table選択時
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -91,6 +91,7 @@ extension ViewController : UITableViewDelegate {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension ViewController: UITableViewDataSource{
 
     // セルの行数
