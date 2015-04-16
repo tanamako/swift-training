@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 
 class DetailViewController: UIViewController {
+
     @IBOutlet weak var webView: UIWebView!
     var parentNavigationController : UINavigationController?
     var articles:AnyObject = [Article]()
@@ -20,17 +21,13 @@ class DetailViewController: UIViewController {
         
         println("articles: \(articles)")
         
-        var title: String! = self.articles.title
-        println(title)
-        
         linkUrl = self.articles.linkUrl
         println("linkUrl ************** \(linkUrl)")
         
-        var request = NSURLRequest(URL: linkUrl!)
-        
-        // webviewを表示
+        var request: NSURLRequest! = NSURLRequest(URL: linkUrl!)
+
+        // webview show
         webView.loadRequest(request)
-        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
