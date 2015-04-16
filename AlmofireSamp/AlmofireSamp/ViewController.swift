@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController {
+class ViewController: UIViewController ,UITableViewDataSource, UITableViewDelegate{
     
     var articles = [Article]()
     
@@ -34,10 +34,12 @@ class ViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     func apiRequest() {
+        
+        println("self: --------\(self)")
+        
         let url = "http://coolhomme.jp/api"
         Alamofire.request(.GET, url, parameters: nil)
             .response { (request, response, data, error) in
@@ -68,8 +70,11 @@ class ViewController: UIViewController {
                         }
                     }
                     
+                    println("self2: --------\(self)")
+                    
                     println(" -------------------------")
                     println(self.articles)
+                    println(self.articles.count)
                     println(" -------------------------")
                     
                 } else {
@@ -78,7 +83,6 @@ class ViewController: UIViewController {
                 }
         }
     }
-    
 }
 
 // MARK: - UITableViewDelegate
@@ -96,6 +100,8 @@ extension ViewController: UITableViewDataSource{
 
     // セルの行数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        println("self3: --------\(self)")
+        
         println("self.articles: \(self.articles)")
         println("articles.count ------------ \(self.articles.count)")
         return articles.count
