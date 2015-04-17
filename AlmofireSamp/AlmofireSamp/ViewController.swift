@@ -29,7 +29,8 @@ class ViewController: UIViewController {
         // navigation ui setting
         navigationController?.navigationBar.barTintColor = UIColor.blackColor()
         navigationItem.title = "Coolhomme"
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        navigationController?.navigationBar.titleTextAttributes = [ NSForegroundColorAttributeName: UIColor.whiteColor()]
 
         
         let url = "http://coolhomme.jp/api"
